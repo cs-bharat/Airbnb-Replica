@@ -1,0 +1,57 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wondulust</title>
+</head> -->
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="row mt-4">
+        <div class="col-8 offset-2">
+      
+    <h1>Edit your listing</h1>
+    <form method="POST" action="/listings/<%= Onelisting._id %>?_method=PUT" novalidate class="needs-validation">
+        <!-- placeholder => value attrinute ke ander Onelisting or   -->
+        <!-- other way to extract vale on (body) throw post request -->
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+        <input name= listing[title]  type="text" value="<%=Onelisting.title%>" class="form-control" required/>
+       </div>
+
+       <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea name= listing[description]  type="text" class="form-control" required><%=Onelisting.description%>
+        </textarea>
+       </div>
+
+        <div class="mb-3">
+            <label for="image" class="form-label">Image Url</label>
+        <input name= listing[image]  value="<%=Onelisting.image%>" class="form-control" required/>
+       </div>
+
+       <div class="row"> 
+        <div class="mb-3 col-4">
+            <label for="price" class="form-label">Price</label>
+        <input name= listing[price]  type="number"  value="<%=Onelisting.price%>" class="form-control" required/>
+       </div>
+
+        <div class="mb-3 col-8">
+            <label for="location" class="form-label">Location</label>
+        <input name= listing[location]  type="text"  value="<%=Onelisting.location%>" class="form-control" required/>
+    </div>
+</div>
+
+        <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+        <input name=  listing[country]  type="text"  value="<%=Onelisting.country%>" class="form-control" required/>
+       </div>
+
+        <button class="btn mb-3" style="color: white; background-color: #fe424d;">Done</button>
+    </form>
+    
+</div>
+</div>
+<script src="/js/script.js"></script>
+</body>
+<!-- </html> -->

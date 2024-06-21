@@ -1,0 +1,138 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    flex: 1;
+}
+
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+.nav-link{
+    color: #222222;
+}
+
+/* footer */
+.f-info{
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: space-evenly;
+    text-align: center;
+    vertical-align: middle;
+}
+.f-info-social , .f-info-links , .f-info-brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-social i{
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.f-info-links a{
+    text-decoration:none;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+/* cards */
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+}
+.card-body{
+    padding: 0 !important;
+}
+
+.listing-links{
+    text-decoration: none;
+
+}
+
+/* card effects  */
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.1;
+    background-color: white;
+}
+
+/* show page */
+.show-img{
+    height: 70vh;
+}
+
+.show-btn{
+    display: flex;
+    /* justify-content: space-between;
+    align-items: center; */
+}
+
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+h1{
+    color: rgb(214, 85, 38);
+}
+p{
+    color: rgb(214, 85, 38);
+}
+.home-container{
+    background: #000;
+    
+}
+.home-container ul li{
+    list-style: none;
+    opacity: 1;
+   
+}
+
+.home-container .u{
+    font-weight: 800;
+    color: azure;
+}
+
+.home-button a{
+     text-decoration: none;
+     color:#fff;
+     background-color: black;
+     padding: 10px;
+     border-radius: 10px;
+     font-size: 20px;
+
+}
+
+.home-button a:hover{
+ background-color: antiquewhite;
+ transition-duration: 1s;
+ transform: scale(1.1);
+ color: black;
+}
+
+.card-description{
+    color: black;
+}

@@ -1,0 +1,68 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wondulust</title>
+</head> -->
+<% layout("/layouts/boilerplate") %>
+
+    <body>
+        <div class="row">
+            <div class="col-8 offset-2"> <!-- offset form ko center-->
+                <br>
+                <h1>create new listing</h1>
+
+                <!-- form validation ke liye ==> novalidate,, class="needs-validation" -->
+
+                <form method="POST" action="/listings" novalidate class="needs-validation">
+                    <!-- other way to extract vale on (body) throw post request -->
+                    <div class="mb-3">
+                        <label for="title" class="form-label" >Title</label>
+                        <input name=listing[title] placeholder="enter title" type="text" class="form-control" required />
+                        <!-- form me input headline . -->
+                        <div class="valid-feedback">Title looks good😊</div>
+                        <div class="invalid-feedback">please enter title</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Message" class="form-label">Message</label>
+                        <textarea name=listing[description] placeholder="enter description"
+                            class="form-control" required></textarea>
+                          <div class="invalid-feedback">please enter short description.🤏</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Image Url</label>
+                        <input name=listing[image] placeholder="enter image url/link" class="form-control" />
+                          
+                    </div>
+
+                    <div class="row">
+                        <div class="mb-3 col-md-4">
+                            <label for="price" class="form-label">Price</label>
+                            <input name=listing[price] placeholder="enter price"  class="form-control" required/>
+                            <div class="invalid-feedback">price should be valid.😑</div>
+                        </div>
+
+                        <div class="mb-3 col-md-8">
+                            <label for="location" class="form-label">Location</label>
+                            <input name=listing[location] placeholder="enter location" type="text"
+                                class="form-control" required/>
+                                <div class="invalid-feedback">location name should be valid.😑</div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="country" class="form-label">Country</label>
+                        <input name=listing[country] placeholder="enter country" type="text" class="form-control" required />
+                        <div class="invalid-feedback">country name should be valid.😑</div>
+                    </div>
+
+                    <button class="btn btn-success mb-3">Add listing</button>
+                </form>
+
+            </div>
+        </div>
+    </body>
+    <!-- </html> -->
