@@ -1,7 +1,8 @@
+require('dotenv').config()
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const port = 8080;
+const port = 3000;
 const Listing = require("./models/listing.js");
 const methodOverride = require("method-override");
 const path = require("path");
@@ -14,7 +15,7 @@ const Review  = require("./models/review.js");
 // eje - mate 
 const ejsMate = require("ejs-mate"); // help to create a layout
 
-const mongo_url = "mongodb://127.0.0.1:27017/wanderlust";
+// const mongo_url = "mongodb://127.0.0.1:27017/Airbnb";
 main()
 .then(()=>{
     console.log("server is connected db");
@@ -23,7 +24,7 @@ main()
 })
 
 async function main(){
-  await mongoose.connect(mongo_url);
+  await mongoose.connect(process.env.mongo_url);
 }
 
 app.set("view engine" , "ejs");
@@ -187,6 +188,6 @@ app.use((err,req,res,next)=>{
     res.render("listing/error.ejs" , {message});
 })
 
-app.listen(port, ()=>{
-    console.log("server is listening on port : 8080");
+app.listen(process.env.PORT, ()=>{
+    console.log(`server is listening on port :${port}`);
 })                        

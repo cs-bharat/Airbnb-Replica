@@ -1,8 +1,8 @@
+require('dotenv').config()
 const mongoose  = require("mongoose");
 const initData  = require("./data.js");
 const listing  = require("../models/listing.js");
 
-const mongo_url = "mongodb://127.0.0.1:27017/wanderlust";
 main()
 .then(()=>{
     console.log("server is connected db");
@@ -11,7 +11,7 @@ main()
 })
 
 async function main(){
-  await mongoose.connect(mongo_url);
+  await mongoose.connect(process.env.mongo_url);
 }
 
 const initDB = async ()=>{
